@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_home_quick_actions",
+  "info": {
+    "displayName": "Home Quick Action"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "label": {
+      "type": "component",
+      "component": "shared.quick-action-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

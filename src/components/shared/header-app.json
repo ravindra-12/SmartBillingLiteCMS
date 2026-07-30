@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_header_apps",
+  "info": {
+    "displayName": "Header App"
+  },
+  "options": {},
+  "attributes": {
+    "create_bill_lable": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

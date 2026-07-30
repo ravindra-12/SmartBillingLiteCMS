@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_home_more_apps",
+  "info": {
+    "displayName": "Home More App"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "label": {
+      "type": "component",
+      "component": "shared.more",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

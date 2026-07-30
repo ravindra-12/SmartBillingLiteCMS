@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "features_heroes",
+  "info": {
+    "singularName": "features-hero",
+    "pluralName": "features-heroes",
+    "displayName": "Features Hero"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "primaryButtonText": {
+      "type": "string"
+    },
+    "secondaryButtonText": {
+      "type": "string"
+    }
+  }
+}

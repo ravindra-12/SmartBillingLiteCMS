@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "stats_sections",
+  "info": {
+    "singularName": "stats-section",
+    "pluralName": "stats-sections",
+    "displayName": "Stats Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "stats": {
+      "type": "component",
+      "component": "shared.stat-item",
+      "repeatable": true,
+      "min": 1,
+      "max": 4
+    }
+  }
+}

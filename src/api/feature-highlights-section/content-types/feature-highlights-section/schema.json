@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "feature_highlights_sections",
+  "info": {
+    "singularName": "feature-highlights-section",
+    "pluralName": "feature-highlights-sections",
+    "displayName": "Feature Highlights Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "aiHeading": {
+      "type": "string"
+    },
+    "aiItems": {
+      "type": "component",
+      "component": "shared.text-card",
+      "repeatable": true
+    },
+    "businessHeading": {
+      "type": "string"
+    },
+    "businessItems": {
+      "type": "component",
+      "component": "shared.features",
+      "repeatable": true
+    },
+    "buttonText": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_stats_apps",
+  "info": {
+    "displayName": "Stats App"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "pricing_heroes",
+  "info": {
+    "singularName": "pricing-hero",
+    "pluralName": "pricing-heroes",
+    "displayName": "Pricing Hero"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_screen_apps",
+  "info": {
+    "singularName": "home-screen-app",
+    "pluralName": "home-screen-apps",
+    "displayName": "Home Screen App"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "header": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.header-app",
+      "repeatable": false
+    },
+    "stats": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.stats-app",
+      "repeatable": true
+    },
+    "quickActions": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.home-quick-action",
+      "repeatable": true
+    },
+    "moreItems": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.home-more-app",
+      "repeatable": true
+    }
+  }
+}

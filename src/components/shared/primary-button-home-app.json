@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_primary_button_home_apps",
+  "info": {
+    "displayName": "Primary Button Home App"
+  },
+  "options": {},
+  "attributes": {
+    "create_bill_lable": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

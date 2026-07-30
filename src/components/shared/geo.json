@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_shared_geos",
+  "info": {
+    "displayName": "GEO"
+  },
+  "options": {},
+  "attributes": {
+    "aiSummary": {
+      "type": "blocks"
+    },
+    "keyTakeaways": {
+      "type": "text"
+    },
+    "faqs": {
+      "type": "component",
+      "component": "shared.faq",
+      "repeatable": true
+    },
+    "references": {
+      "type": "component",
+      "component": "shared.reference",
+      "repeatable": true
+    },
+    "topics": {
+      "type": "component",
+      "component": "shared.topic",
+      "repeatable": true
+    },
+    "lastReviewed": {
+      "type": "date"
+    },
+    "canonicalUrl": {
+      "type": "string"
+    },
+    "schemaJson": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}

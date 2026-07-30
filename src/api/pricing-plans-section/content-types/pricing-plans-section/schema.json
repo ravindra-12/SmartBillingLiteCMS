@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "pricing_plans_sections",
+  "info": {
+    "singularName": "pricing-plans-section",
+    "pluralName": "pricing-plans-sections",
+    "displayName": "Pricing Plans Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "plans": {
+      "type": "component",
+      "component": "shared.pricing-plan",
+      "repeatable": true
+    },
+    "trustItems": {
+      "type": "component",
+      "component": "shared.features",
+      "repeatable": true
+    }
+  }
+}

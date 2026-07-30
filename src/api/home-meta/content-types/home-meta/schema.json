@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_metas",
+  "info": {
+    "singularName": "home-meta",
+    "pluralName": "home-metas",
+    "displayName": "Home Meta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "geo": {
+      "type": "component",
+      "component": "shared.geo",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "business_types",
+  "info": {
+    "singularName": "business-type",
+    "pluralName": "business-types",
+    "displayName": "Business Type"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "subheading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "features": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.business-features",
+      "repeatable": true
+    }
+  }
+}

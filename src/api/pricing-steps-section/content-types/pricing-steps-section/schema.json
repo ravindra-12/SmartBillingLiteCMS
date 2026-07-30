@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "pricing_steps_sections",
+  "info": {
+    "singularName": "pricing-steps-section",
+    "pluralName": "pricing-steps-sections",
+    "displayName": "Pricing Steps Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "text"
+    },
+    "steps": {
+      "type": "component",
+      "component": "shared.text-card",
+      "repeatable": true
+    }
+  }
+}

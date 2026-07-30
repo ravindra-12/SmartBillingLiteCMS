@@ -1,0 +1,71 @@
+{
+  "kind": "singleType",
+  "collectionName": "pricing_bottom_sections",
+  "info": {
+    "singularName": "pricing-bottom-section",
+    "pluralName": "pricing-bottom-sections",
+    "displayName": "Pricing Bottom Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "loginHeading": {
+      "type": "string"
+    },
+    "loginDescription": {
+      "type": "text"
+    },
+    "phoneLabel": {
+      "type": "string"
+    },
+    "countryCode": {
+      "type": "string"
+    },
+    "phonePlaceholder": {
+      "type": "string"
+    },
+    "otpButtonText": {
+      "type": "string"
+    },
+    "registerPrompt": {
+      "type": "string"
+    },
+    "registerText": {
+      "type": "string"
+    },
+    "testimonialHeading": {
+      "type": "string"
+    },
+    "testimonialQuote": {
+      "type": "text"
+    },
+    "testimonialInitial": {
+      "type": "string"
+    },
+    "testimonialName": {
+      "type": "string"
+    },
+    "testimonialMeta": {
+      "type": "string"
+    },
+    "testimonialBenefits": {
+      "type": "component",
+      "component": "shared.features",
+      "repeatable": true
+    },
+    "ctaHeading": {
+      "type": "string"
+    },
+    "ctaDescription": {
+      "type": "text"
+    },
+    "ctaPrimaryButtonText": {
+      "type": "string"
+    },
+    "ctaSecondaryButtonText": {
+      "type": "string"
+    }
+  }
+}

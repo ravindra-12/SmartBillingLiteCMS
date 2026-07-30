@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_quick_action_items",
+  "info": {
+    "displayName": "Quick Action Item"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_shared_pricing_plans",
+  "info": {
+    "displayName": "pricing-plan"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "string",
+      "required": true
+    },
+    "duration": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "green",
+        "blue",
+        "orange"
+      ],
+      "default": "blue"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "button": {
+      "type": "string"
+    },
+    "features": {
+      "type": "component",
+      "component": "shared.features",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "why_choose_sections",
+  "info": {
+    "singularName": "why-choose-section",
+    "pluralName": "why-choose-sections",
+    "displayName": "Why Choose Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "text"
+    },
+    "features": {
+      "type": "component",
+      "component": "shared.feature-card",
+      "repeatable": true
+    }
+  }
+}
