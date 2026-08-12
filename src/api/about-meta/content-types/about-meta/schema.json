@@ -20,6 +20,11 @@
       "type": "component",
       "component": "shared.geo",
       "repeatable": false
+    },
+    "Aeo": {
+      "type": "component",
+      "component": "shared.aeo",
+      "repeatable": false
     }
   }
 }

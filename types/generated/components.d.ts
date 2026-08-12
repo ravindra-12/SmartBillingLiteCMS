@@ -1,5 +1,32 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedAeo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_aeos';
+  info: {
+    displayName: 'Aeo';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    enableAEO: Schema.Attribute.Boolean;
+    faqItems: Schema.Attribute.Component<'shared.faq-items', true>;
+    headline: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    schemaType: Schema.Attribute.Enumeration<
+      [
+        'WebPage',
+        'Article',
+        'FAQPage',
+        'HowTo',
+        'Product',
+        'Review',
+        'Organization',
+        'BreadcrumbList',
+      ]
+    >;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface SharedBusinessFeatures extends Struct.ComponentSchema {
   collectionName: 'components_shared_business_features';
   info: {
@@ -18,6 +45,17 @@ export interface SharedFaq extends Struct.ComponentSchema {
   };
   attributes: {
     answer: Schema.Attribute.Blocks;
+    question: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFaqItems extends Struct.ComponentSchema {
+  collectionName: 'components_shared_faq_items';
+  info: {
+    displayName: 'faqItems';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
     question: Schema.Attribute.String;
   };
 }
@@ -278,8 +316,10 @@ export interface SharedTopic extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.aeo': SharedAeo;
       'shared.business-features': SharedBusinessFeatures;
       'shared.faq': SharedFaq;
+      'shared.faq-items': SharedFaqItems;
       'shared.feature-card': SharedFeatureCard;
       'shared.feature-group': SharedFeatureGroup;
       'shared.features': SharedFeatures;

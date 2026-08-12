@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_shared_aeos",
+  "info": {
+    "displayName": "Aeo"
+  },
+  "options": {},
+  "attributes": {
+    "enableAEO": {
+      "type": "boolean"
+    },
+    "schemaType": {
+      "type": "enumeration",
+      "enum": [
+        "WebPage",
+        "Article",
+        "FAQPage",
+        "HowTo",
+        "Product",
+        "Review",
+        "Organization",
+        "BreadcrumbList"
+      ]
+    },
+    "headline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "faqItems": {
+      "type": "component",
+      "component": "shared.faq-items",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

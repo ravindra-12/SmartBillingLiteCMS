@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "home_metas",
+  "collectionName": "blog_metas",
   "info": {
-    "singularName": "home-meta",
-    "pluralName": "home-metas",
-    "displayName": "Home Meta"
+    "singularName": "blog-meta",
+    "pluralName": "blog-metas",
+    "displayName": "Blog Meta"
   },
   "options": {
     "draftAndPublish": true
@@ -21,7 +21,7 @@
       "component": "shared.geo",
       "repeatable": false
     },
-    "aeo": {
+    "Aeo": {
       "type": "component",
       "component": "shared.aeo",
       "repeatable": false

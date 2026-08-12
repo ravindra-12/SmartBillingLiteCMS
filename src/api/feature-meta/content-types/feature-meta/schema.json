@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "home_metas",
+  "collectionName": "feature_metas",
   "info": {
-    "singularName": "home-meta",
-    "pluralName": "home-metas",
-    "displayName": "Home Meta"
+    "singularName": "feature-meta",
+    "pluralName": "feature-metas",
+    "displayName": "Feature Meta"
   },
   "options": {
     "draftAndPublish": true

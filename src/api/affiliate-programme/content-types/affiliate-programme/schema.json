@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "home_metas",
+  "collectionName": "affiliate_programmes",
   "info": {
-    "singularName": "home-meta",
-    "pluralName": "home-metas",
-    "displayName": "Home Meta"
+    "singularName": "affiliate-programme",
+    "pluralName": "affiliate-programmes",
+    "displayName": "Affiliate Programme meta"
   },
   "options": {
     "draftAndPublish": true
@@ -21,7 +21,7 @@
       "component": "shared.geo",
       "repeatable": false
     },
-    "aeo": {
+    "Aeo": {
       "type": "component",
       "component": "shared.aeo",
       "repeatable": false

@@ -440,6 +440,36 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAboutMetaAboutMeta extends Struct.SingleTypeSchema {
+  collectionName: 'about_metas';
+  info: {
+    displayName: 'About Meta';
+    pluralName: 'about-metas';
+    singularName: 'about-meta';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Aeo: Schema.Attribute.Component<'shared.aeo', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Geo: Schema.Attribute.Component<'shared.geo', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-meta.about-meta'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   collectionName: 'abouts';
   info: {
@@ -463,6 +493,37 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAffiliateProgrammeAffiliateProgramme
+  extends Struct.SingleTypeSchema {
+  collectionName: 'affiliate_programmes';
+  info: {
+    displayName: 'Affiliate Programme meta';
+    pluralName: 'affiliate-programmes';
+    singularName: 'affiliate-programme';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Aeo: Schema.Attribute.Component<'shared.aeo', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    geo: Schema.Attribute.Component<'shared.geo', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::affiliate-programme.affiliate-programme'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -535,6 +596,36 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiBlogMetaBlogMeta extends Struct.SingleTypeSchema {
+  collectionName: 'blog_metas';
+  info: {
+    displayName: 'Blog Meta';
+    pluralName: 'blog-metas';
+    singularName: 'blog-meta';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Aeo: Schema.Attribute.Component<'shared.aeo', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    geo: Schema.Attribute.Component<'shared.geo', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-meta.blog-meta'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -649,6 +740,36 @@ export interface ApiFeatureHighlightsSectionFeatureHighlightsSection
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFeatureMetaFeatureMeta extends Struct.SingleTypeSchema {
+  collectionName: 'feature_metas';
+  info: {
+    displayName: 'Feature Meta';
+    pluralName: 'feature-metas';
+    singularName: 'feature-meta';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    aeo: Schema.Attribute.Component<'shared.aeo', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    geo: Schema.Attribute.Component<'shared.geo', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::feature-meta.feature-meta'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -827,6 +948,7 @@ export interface ApiHomeMetaHomeMeta extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    aeo: Schema.Attribute.Component<'shared.aeo', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1614,12 +1736,16 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::about-meta.about-meta': ApiAboutMetaAboutMeta;
       'api::about.about': ApiAboutAbout;
+      'api::affiliate-programme.affiliate-programme': ApiAffiliateProgrammeAffiliateProgramme;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
+      'api::blog-meta.blog-meta': ApiBlogMetaBlogMeta;
       'api::business-type.business-type': ApiBusinessTypeBusinessType;
       'api::category.category': ApiCategoryCategory;
       'api::feature-highlights-section.feature-highlights-section': ApiFeatureHighlightsSectionFeatureHighlightsSection;
+      'api::feature-meta.feature-meta': ApiFeatureMetaFeatureMeta;
       'api::features-hero.features-hero': ApiFeaturesHeroFeaturesHero;
       'api::features-list-section.features-list-section': ApiFeaturesListSectionFeaturesListSection;
       'api::global.global': ApiGlobalGlobal;
