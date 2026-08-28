@@ -9,6 +9,123 @@
     "siteDescription": "A Blog made with Strapi",
     "favicon": null
   },
+  "dynamicPage": {
+    "title": "Smart Billing Lite - AI-Powered Billing App",
+    "slug": "smart-billing-lite",
+    "blocks": [
+      {
+        "__component": "shared.dynamic-page-hero",
+        "badgeText": "AI-Powered Billing App",
+        "title": "Smart Billing Made Simple!",
+        "description": "AI-powered mobile billing app with QR payments, thermal printing, POS device support, sound box integration, udhaar tracking, and daily business reports.",
+        "primaryButton": {
+          "label": "Start 30-Day Free Trial",
+          "url": "https://smartbillinglite.in/#download-apk"
+        }
+      },
+      {
+        "__component": "shared.dynamic-page-video-section",
+        "title": "See Smart Billing Lite in Action",
+        "description": "A quick walkthrough of billing, QR collection, receipt printing, udhaar tracking, and daily reports.",
+        "videoUrl": "https://www.youtube.com/",
+        "videoTitle": "Smart Billing Lite Video Tutorials"
+      },
+      {
+        "__component": "shared.dynamic-page-intro",
+        "badgeText": "Video Tutorials",
+        "description": "Watch quick demos of the key features that make billing faster, easier, and smarter for your business."
+      },
+      {
+        "__component": "shared.dynamic-page-feature-grid",
+        "badgeText": "See How Smart Billing Works",
+        "title": "Everything you need for faster daily billing",
+        "features": [
+          {
+            "title": "Complete App Overview",
+            "description": "Full walkthrough of Smart Billing Lite — billing, payments, receipts, reports and more."
+          },
+          {
+            "title": "Billing & Invoicing",
+            "description": "Create professional invoices, add items, apply discounts, and print thermal receipts instantly."
+          },
+          {
+            "title": "Payments & Reports",
+            "description": "Collect UPI payments, track udhaar, and view daily profit reports on your mobile."
+          }
+        ]
+      },
+      {
+        "__component": "shared.dynamic-page-feature-grid",
+        "badgeText": "Why Choose Smart Billing Lite?",
+        "title": "Everything a small business needs to bill faster, collect better, and grow smarter.",
+        "features": [
+          { "title": "Super Fast Billing", "description": "Create bills in seconds with calculator-based and item-wise billing for faster checkout." },
+          { "title": "QR & UPI Payments", "description": "Accept instant digital payments through QR code, UPI, and multiple payment methods." },
+          { "title": "Thermal Receipt Printing", "description": "Print customer receipts instantly using Bluetooth and USB thermal printers." },
+          { "title": "Udhaar Management", "description": "Track customer dues, manage pending payments, and send payment reminders easily." },
+          { "title": "Daily Income Tracking", "description": "Monitor daily sales, profit, expenses, and payment status with smart reports." },
+          { "title": "AI Business Insights", "description": "Get intelligent business suggestions and analytics to improve growth and profits." }
+        ]
+      },
+      {
+        "__component": "shared.dynamic-page-cta-banner",
+        "title": "Choose your workspace",
+        "description": "Start on your phone with Smart Billing Lite, or take your business further on the web with SmartBill Pro.",
+        "buttonLabel": "Download Smart Billing Lite",
+        "buttonUrl": "https://play.google.com/store/apps/details?id=com.murmu.smartbillinglite&hl=en_IN",
+        "theme": "primary"
+      },
+      {
+        "__component": "shared.dynamic-page-faq-section",
+        "title": "Frequently Asked Questions",
+        "description": "Everything you need to know about Smart Billing Lite.",
+        "items": [
+          { "question": "What is Smart Billing Lite?", "answer": "Smart Billing Lite is an AI-powered mobile billing app for Indian small businesses, with billing, UPI and QR payments, receipt printing, udhaar tracking, and daily reports." },
+          { "question": "Can I print thermal receipts from the app?", "answer": "Yes. Smart Billing Lite supports Bluetooth and USB thermal printers for quick customer receipt printing." },
+          { "question": "Can I track customer udhaar?", "answer": "Yes. You can record customer dues, monitor pending payments, and send payment reminders from the app." },
+          { "question": "Is there a free trial?", "answer": "Yes. Start with a 30-day free trial. No credit card is needed." },
+          { "question": "Is Smart Billing Lite suitable for my business?", "answer": "It is designed for kirana stores, grocery stores, pharmacies, salons, food stalls, repair shops, and small vendors." }
+        ]
+      }
+    ],
+    "seo": {
+      "metaTitle": "Smart Billing Lite | AI-Powered Billing App for Small Businesses",
+      "metaDescription": "Smart Billing Lite makes billing simple with QR and UPI payments, thermal receipt printing, udhaar tracking, POS support, and daily business reports.",
+      "keywords": "AI billing app, mobile billing app, QR payment app, UPI billing, thermal printer billing, udhaar management, billing app India",
+      "canonicalUrl": "https://smartbillinglite.in/"
+    },
+    "geo": {
+      "aiSummary": [
+        { "type": "paragraph", "children": [{ "type": "text", "text": "Smart Billing Lite is an AI-powered mobile billing app for Indian small businesses. It combines fast invoicing, QR and UPI payment collection, thermal receipt printing, udhaar management, POS device support, sound box integration, and daily business reports in one simple app." }] }
+      ],
+      "keyTakeaways": "Smart Billing Lite is for Indian small businesses.\nSupports billing, QR/UPI payments, thermal printing, udhaar tracking, POS devices, sound box integration, and daily reports.\nAvailable with a 30-day free trial and no credit card requirement.",
+      "topics": [
+        { "title": "Mobile billing app" },
+        { "title": "QR and UPI payments" },
+        { "title": "Thermal receipt printing" },
+        { "title": "Udhaar management" },
+        { "title": "Small business software India" }
+      ],
+      "references": [
+        { "title": "Smart Billing Lite website", "url": "https://smartbillinglite.in/", "publisher": "Smart Billing Lite" },
+        { "title": "Smart Billing Lite on Google Play", "url": "https://play.google.com/store/apps/details?id=com.murmu.smartbillinglite&hl=en_IN", "publisher": "Google Play" }
+      ],
+      "lastReviewed": "2026-08-28",
+      "canonicalUrl": "https://smartbillinglite.in/"
+    },
+    "aeo": {
+      "enableAEO": true,
+      "schemaType": "SoftwareApplication",
+      "headline": "Smart Billing Lite - AI-Powered Billing App",
+      "description": "Mobile billing, QR and UPI payments, thermal receipt printing, udhaar tracking, and business reports for Indian small businesses.",
+      "url": "https://smartbillinglite.in/",
+      "faqItems": [
+        { "question": "What is Smart Billing Lite?", "answer": "An AI-powered mobile billing app for Indian small businesses." },
+        { "question": "Does it support thermal printers?", "answer": "Yes, it supports Bluetooth and USB thermal printers." },
+        { "question": "Is a free trial available?", "answer": "Yes, a 30-day free trial is available without a credit card." }
+      ]
+    }
+  },
   "about": {
     "title": "About the strapi blog",
     "blocks": [

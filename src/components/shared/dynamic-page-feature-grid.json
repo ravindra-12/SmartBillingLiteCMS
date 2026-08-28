@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_dynamic_page_feature_grids",
+  "info": {
+    "displayName": "Dynamic Page Feature Grid"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "features": {
+      "type": "component",
+      "component": "shared.dynamic-page-feature-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

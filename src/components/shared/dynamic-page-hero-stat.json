@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_dynamic_page_hero_stats",
+  "info": {
+    "displayName": "Dynamic Page Hero Stat"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

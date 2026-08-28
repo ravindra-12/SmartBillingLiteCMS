@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_dynamic_page_feature_cards",
+  "info": {
+    "displayName": "Dynamic Page Feature Card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

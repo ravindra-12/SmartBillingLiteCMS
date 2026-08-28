@@ -713,6 +713,53 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiDynamicPageDynamicPage extends Struct.CollectionTypeSchema {
+  collectionName: 'dynamic_pages';
+  info: {
+    description: 'Build landing pages from reusable content blocks';
+    displayName: 'Dynamic Page';
+    pluralName: 'dynamic-pages';
+    singularName: 'dynamic-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    aeo: Schema.Attribute.Component<'shared.aeo', false>;
+    blocks: Schema.Attribute.DynamicZone<
+      [
+        'shared.dynamic-page-hero',
+        'shared.dynamic-page-intro',
+        'shared.dynamic-page-feature-grid',
+        'shared.dynamic-page-video-section',
+        'shared.dynamic-page-cta-banner',
+        'shared.dynamic-page-faq-section',
+        'shared.media',
+        'shared.quote',
+        'shared.rich-text',
+        'shared.slider',
+      ]
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    geo: Schema.Attribute.Component<'shared.geo', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::dynamic-page.dynamic-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFeatureHighlightsSectionFeatureHighlightsSection
   extends Struct.SingleTypeSchema {
   collectionName: 'feature_highlights_sections';
@@ -1744,6 +1791,7 @@ declare module '@strapi/strapi' {
       'api::blog-meta.blog-meta': ApiBlogMetaBlogMeta;
       'api::business-type.business-type': ApiBusinessTypeBusinessType;
       'api::category.category': ApiCategoryCategory;
+      'api::dynamic-page.dynamic-page': ApiDynamicPageDynamicPage;
       'api::feature-highlights-section.feature-highlights-section': ApiFeatureHighlightsSectionFeatureHighlightsSection;
       'api::feature-meta.feature-meta': ApiFeatureMetaFeatureMeta;
       'api::features-hero.features-hero': ApiFeaturesHeroFeaturesHero;

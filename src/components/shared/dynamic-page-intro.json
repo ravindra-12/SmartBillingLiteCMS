@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_dynamic_page_intros",
+  "info": {
+    "displayName": "Dynamic Page Intro"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

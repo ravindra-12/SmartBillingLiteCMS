@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_shared_dynamic_page_heroes",
+  "info": {
+    "displayName": "Dynamic Page Hero"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "primaryButton": {
+      "type": "component",
+      "component": "shared.dynamic-page-button",
+      "repeatable": false
+    },
+    "secondaryButton": {
+      "type": "component",
+      "component": "shared.dynamic-page-button",
+      "repeatable": false
+    },
+    "stats": {
+      "type": "component",
+      "component": "shared.dynamic-page-hero-stat",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

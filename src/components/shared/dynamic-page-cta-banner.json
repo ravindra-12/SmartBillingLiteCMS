@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_dynamic_page_cta_banners",
+  "info": {
+    "displayName": "Dynamic Page CTA Banner",
+    "description": "Call-to-action banner for a dynamic page"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "buttonLabel": {
+      "type": "string"
+    },
+    "buttonUrl": {
+      "type": "string"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": ["primary", "dark", "light"]
+    }
+  },
+  "config": {}
+}

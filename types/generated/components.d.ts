@@ -18,6 +18,7 @@ export interface SharedAeo extends Struct.ComponentSchema {
         'FAQPage',
         'HowTo',
         'Product',
+        'SoftwareApplication',
         'Review',
         'Organization',
         'BreadcrumbList',
@@ -35,6 +36,132 @@ export interface SharedBusinessFeatures extends Struct.ComponentSchema {
   attributes: {
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedDynamicPageButton extends Struct.ComponentSchema {
+  collectionName: 'components_shared_dynamic_page_buttons';
+  info: {
+    displayName: 'Dynamic Page Button';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface SharedDynamicPageCtaBanner extends Struct.ComponentSchema {
+  collectionName: 'components_shared_dynamic_page_cta_banners';
+  info: {
+    description: 'Call-to-action banner for a dynamic page';
+    displayName: 'Dynamic Page CTA Banner';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
+    buttonLabel: Schema.Attribute.String;
+    buttonUrl: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    theme: Schema.Attribute.Enumeration<['primary', 'dark', 'light']>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedDynamicPageFaqSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_dynamic_page_faq_sections';
+  info: {
+    description: 'Frequently asked questions section';
+    displayName: 'Dynamic Page FAQ Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    items: Schema.Attribute.Component<'shared.faq-items', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedDynamicPageFeatureCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_dynamic_page_feature_cards';
+  info: {
+    displayName: 'Dynamic Page Feature Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedDynamicPageFeatureGrid extends Struct.ComponentSchema {
+  collectionName: 'components_shared_dynamic_page_feature_grids';
+  info: {
+    displayName: 'Dynamic Page Feature Grid';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    features: Schema.Attribute.Component<
+      'shared.dynamic-page-feature-card',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedDynamicPageHero extends Struct.ComponentSchema {
+  collectionName: 'components_shared_dynamic_page_heroes';
+  info: {
+    displayName: 'Dynamic Page Hero';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    primaryButton: Schema.Attribute.Component<
+      'shared.dynamic-page-button',
+      false
+    >;
+    secondaryButton: Schema.Attribute.Component<
+      'shared.dynamic-page-button',
+      false
+    >;
+    stats: Schema.Attribute.Component<'shared.dynamic-page-hero-stat', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedDynamicPageHeroStat extends Struct.ComponentSchema {
+  collectionName: 'components_shared_dynamic_page_hero_stats';
+  info: {
+    displayName: 'Dynamic Page Hero Stat';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedDynamicPageIntro extends Struct.ComponentSchema {
+  collectionName: 'components_shared_dynamic_page_intros';
+  info: {
+    displayName: 'Dynamic Page Intro';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedDynamicPageVideoSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_dynamic_page_video_sections';
+  info: {
+    description: 'Video section with heading and supporting copy';
+    displayName: 'Dynamic Page Video Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    thumbnail: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    videoTitle: Schema.Attribute.String;
+    videoUrl: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -318,6 +445,15 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.aeo': SharedAeo;
       'shared.business-features': SharedBusinessFeatures;
+      'shared.dynamic-page-button': SharedDynamicPageButton;
+      'shared.dynamic-page-cta-banner': SharedDynamicPageCtaBanner;
+      'shared.dynamic-page-faq-section': SharedDynamicPageFaqSection;
+      'shared.dynamic-page-feature-card': SharedDynamicPageFeatureCard;
+      'shared.dynamic-page-feature-grid': SharedDynamicPageFeatureGrid;
+      'shared.dynamic-page-hero': SharedDynamicPageHero;
+      'shared.dynamic-page-hero-stat': SharedDynamicPageHeroStat;
+      'shared.dynamic-page-intro': SharedDynamicPageIntro;
+      'shared.dynamic-page-video-section': SharedDynamicPageVideoSection;
       'shared.faq': SharedFaq;
       'shared.faq-items': SharedFaqItems;
       'shared.feature-card': SharedFeatureCard;

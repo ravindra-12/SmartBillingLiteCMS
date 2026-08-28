@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_dynamic_page_faq_sections",
+  "info": {
+    "displayName": "Dynamic Page FAQ Section",
+    "description": "Frequently asked questions section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "component": "shared.faq-items",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
