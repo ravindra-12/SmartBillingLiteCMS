@@ -1,0 +1,1 @@
+{"collectionName":"components_shared_app_download_sections","info":{"displayName":"App Download Section"},"options":{},"attributes":{"badgeText":{"type":"string"},"title":{"type":"string"},"description":{"type":"text"},"version":{"type":"string"},"size":{"type":"string"},"requirements":{"type":"string"},"buttonText":{"type":"string"},"buttonLink":{"type":"string"}},"config":{}}

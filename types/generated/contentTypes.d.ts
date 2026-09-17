@@ -1069,6 +1069,46 @@ export interface ApiHomeScreenAppHomeScreenApp extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiHomeHome extends Struct.SingleTypeSchema {
+  collectionName: 'home';
+  info: {
+    displayName: 'Home';
+    pluralName: 'homes';
+    singularName: 'home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    aeo: Schema.Attribute.Component<'shared.aeo', false>;
+    appDownload: Schema.Attribute.Component<
+      'shared.app-download-section',
+      false
+    >;
+    businessTypes: Schema.Attribute.Component<
+      'shared.business-types-section',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    geo: Schema.Attribute.Component<'shared.geo', false>;
+    hero: Schema.Attribute.Component<'shared.home-hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    stats: Schema.Attribute.Component<'shared.home-stats', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    videos: Schema.Attribute.Component<'shared.home-video-section', false>;
+    whyChoose: Schema.Attribute.Component<'shared.home-feature-section', false>;
+    workspace: Schema.Attribute.Component<'shared.workspace-section', false>;
+  };
+}
+
 export interface ApiPricingBottomSectionPricingBottomSection
   extends Struct.SingleTypeSchema {
   collectionName: 'pricing_bottom_sections';
@@ -1801,6 +1841,7 @@ declare module '@strapi/strapi' {
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;
       'api::home-meta.home-meta': ApiHomeMetaHomeMeta;
       'api::home-screen-app.home-screen-app': ApiHomeScreenAppHomeScreenApp;
+      'api::home.home': ApiHomeHome;
       'api::pricing-bottom-section.pricing-bottom-section': ApiPricingBottomSectionPricingBottomSection;
       'api::pricing-hero.pricing-hero': ApiPricingHeroPricingHero;
       'api::pricing-plans-section.pricing-plans-section': ApiPricingPlansSectionPricingPlansSection;

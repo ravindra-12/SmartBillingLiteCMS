@@ -1,0 +1,1 @@
+{"collectionName":"components_shared_workspace_sections","info":{"displayName":"Workspace Section"},"options":{},"attributes":{"badgeText":{"type":"string"},"title":{"type":"string"},"description":{"type":"text"},"cards":{"type":"component","component":"shared.workspace-card","repeatable":true}},"config":{}}

@@ -1,0 +1,1 @@
+{"collectionName":"components_shared_home_video_sections","info":{"displayName":"Home Video Section"},"options":{},"attributes":{"badgeText":{"type":"string"},"title":{"type":"string"},"description":{"type":"text"},"videos":{"type":"component","component":"shared.home-video-card","repeatable":true}},"config":{}}

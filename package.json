@@ -11,6 +11,7 @@
     "develop": "strapi develop",
     "seed:example": "node ./scripts/seed.js",
     "seed:dynamic-page": "node ./scripts/seed-dynamic-page.js",
+    "seed:home": "node ./scripts/seed-home.js",
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",

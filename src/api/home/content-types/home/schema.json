@@ -1,0 +1,65 @@
+{
+  "kind": "singleType",
+  "collectionName": "home",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "geo": {
+      "type": "component",
+      "component": "shared.geo",
+      "repeatable": false
+    },
+    "aeo": {
+      "type": "component",
+      "component": "shared.aeo",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "shared.home-hero",
+      "repeatable": false
+    },
+    "workspace": {
+      "type": "component",
+      "component": "shared.workspace-section",
+      "repeatable": false
+    },
+    "videos": {
+      "type": "component",
+      "component": "shared.home-video-section",
+      "repeatable": false
+    },
+    "businessTypes": {
+      "type": "component",
+      "component": "shared.business-types-section",
+      "repeatable": false
+    },
+    "whyChoose": {
+      "type": "component",
+      "component": "shared.home-feature-section",
+      "repeatable": false
+    },
+    "appDownload": {
+      "type": "component",
+      "component": "shared.app-download-section",
+      "repeatable": false
+    },
+    "stats": {
+      "type": "component",
+      "component": "shared.home-stats",
+      "repeatable": false
+    }
+  }
+}

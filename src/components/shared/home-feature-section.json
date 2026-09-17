@@ -1,0 +1,1 @@
+{"collectionName":"components_shared_home_feature_sections","info":{"displayName":"Home Feature Section"},"options":{},"attributes":{"badgeText":{"type":"string"},"title":{"type":"string"},"description":{"type":"text"},"features":{"type":"component","component":"shared.feature-card","repeatable":true}},"config":{}}

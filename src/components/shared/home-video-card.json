@@ -1,0 +1,1 @@
+{"collectionName":"components_shared_home_video_cards","info":{"displayName":"Home Video Card"},"options":{},"attributes":{"badgeText":{"type":"string"},"title":{"type":"string"},"description":{"type":"text"},"videoUrl":{"type":"string"},"thumbnail":{"type":"media","multiple":false,"allowedTypes":["images"]}},"config":{}}

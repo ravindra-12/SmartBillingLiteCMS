@@ -28,6 +28,23 @@ export interface SharedAeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedAppDownloadSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_app_download_sections';
+  info: {
+    displayName: 'App Download Section';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    buttonLink: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    requirements: Schema.Attribute.String;
+    size: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    version: Schema.Attribute.String;
+  };
+}
+
 export interface SharedBusinessFeatures extends Struct.ComponentSchema {
   collectionName: 'components_shared_business_features';
   info: {
@@ -35,6 +52,30 @@ export interface SharedBusinessFeatures extends Struct.ComponentSchema {
   };
   attributes: {
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedBusinessTypeItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_business_type_items';
+  info: {
+    displayName: 'Business Type Item';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedBusinessTypesSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_business_types_sections';
+  info: {
+    displayName: 'Business Types Section';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    items: Schema.Attribute.Component<'shared.business-type-item', true>;
     title: Schema.Attribute.String;
   };
 }
@@ -250,6 +291,37 @@ export interface SharedHeaderApp extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedHomeFeatureSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_feature_sections';
+  info: {
+    displayName: 'Home Feature Section';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    features: Schema.Attribute.Component<'shared.feature-card', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeHero extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_heroes';
+  info: {
+    displayName: 'Home Hero';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    heroImage: Schema.Attribute.Media<'images'>;
+    primaryButtonLink: Schema.Attribute.String;
+    primaryButtonText: Schema.Attribute.String;
+    secondaryButtonLink: Schema.Attribute.String;
+    secondaryButtonText: Schema.Attribute.String;
+    titleLine1: Schema.Attribute.String;
+    titleLine2: Schema.Attribute.String;
+  };
+}
+
 export interface SharedHomeMoreApp extends Struct.ComponentSchema {
   collectionName: 'components_shared_home_more_apps';
   info: {
@@ -269,6 +341,54 @@ export interface SharedHomeQuickAction extends Struct.ComponentSchema {
   attributes: {
     label: Schema.Attribute.Component<'shared.quick-action-item', true>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeStat extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_stats';
+  info: {
+    displayName: 'Home Stat';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeStats extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_stats_sections';
+  info: {
+    displayName: 'Home Stats';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'shared.home-stat', true>;
+  };
+}
+
+export interface SharedHomeVideoCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_video_cards';
+  info: {
+    displayName: 'Home Video Card';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    thumbnail: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+    videoUrl: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHomeVideoSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_home_video_sections';
+  info: {
+    displayName: 'Home Video Section';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    videos: Schema.Attribute.Component<'shared.home-video-card', true>;
   };
 }
 
@@ -440,11 +560,44 @@ export interface SharedTopic extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedWorkspaceCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_workspace_cards';
+  info: {
+    displayName: 'Workspace Card';
+  };
+  attributes: {
+    buttonLink: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    features: Schema.Attribute.Component<'shared.features', true>;
+    note: Schema.Attribute.String;
+    theme: Schema.Attribute.Enumeration<['light', 'dark']>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedWorkspaceSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_workspace_sections';
+  info: {
+    displayName: 'Workspace Section';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    cards: Schema.Attribute.Component<'shared.workspace-card', true>;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.aeo': SharedAeo;
+      'shared.app-download-section': SharedAppDownloadSection;
       'shared.business-features': SharedBusinessFeatures;
+      'shared.business-type-item': SharedBusinessTypeItem;
+      'shared.business-types-section': SharedBusinessTypesSection;
       'shared.dynamic-page-button': SharedDynamicPageButton;
       'shared.dynamic-page-cta-banner': SharedDynamicPageCtaBanner;
       'shared.dynamic-page-faq-section': SharedDynamicPageFaqSection;
@@ -461,8 +614,14 @@ declare module '@strapi/strapi' {
       'shared.features': SharedFeatures;
       'shared.geo': SharedGeo;
       'shared.header-app': SharedHeaderApp;
+      'shared.home-feature-section': SharedHomeFeatureSection;
+      'shared.home-hero': SharedHomeHero;
       'shared.home-more-app': SharedHomeMoreApp;
       'shared.home-quick-action': SharedHomeQuickAction;
+      'shared.home-stat': SharedHomeStat;
+      'shared.home-stats': SharedHomeStats;
+      'shared.home-video-card': SharedHomeVideoCard;
+      'shared.home-video-section': SharedHomeVideoSection;
       'shared.media': SharedMedia;
       'shared.more': SharedMore;
       'shared.pricing-plan': SharedPricingPlan;
@@ -477,6 +636,8 @@ declare module '@strapi/strapi' {
       'shared.stats-app': SharedStatsApp;
       'shared.text-card': SharedTextCard;
       'shared.topic': SharedTopic;
+      'shared.workspace-card': SharedWorkspaceCard;
+      'shared.workspace-section': SharedWorkspaceSection;
     }
   }
 }

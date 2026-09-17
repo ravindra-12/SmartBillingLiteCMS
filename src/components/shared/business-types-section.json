@@ -1,0 +1,1 @@
+{"collectionName":"components_shared_business_types_sections","info":{"displayName":"Business Types Section"},"options":{},"attributes":{"badgeText":{"type":"string"},"title":{"type":"string"},"description":{"type":"text"},"items":{"type":"component","component":"shared.business-type-item","repeatable":true}},"config":{}}
