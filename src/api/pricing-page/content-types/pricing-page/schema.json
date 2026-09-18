@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "pricing_pages",
+  "info": { "singularName": "pricing-page", "pluralName": "pricing-pages", "displayName": "Pricing" },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": { "type": "component", "component": "shared.seo", "repeatable": false },
+    "geo": { "type": "component", "component": "shared.geo", "repeatable": false },
+    "aeo": { "type": "component", "component": "shared.aeo", "repeatable": false },
+    "hero": { "type": "component", "component": "shared.pricing-page-hero", "repeatable": false },
+    "plans": { "type": "component", "component": "shared.pricing-page-plans", "repeatable": false },
+    "steps": { "type": "component", "component": "shared.pricing-page-steps", "repeatable": false },
+    "bottom": { "type": "component", "component": "shared.pricing-page-bottom", "repeatable": false },
+    "workspace": { "type": "component", "component": "shared.workspace-section", "repeatable": false }
+  }
+}

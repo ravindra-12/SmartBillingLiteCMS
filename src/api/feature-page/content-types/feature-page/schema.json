@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "feature_pages",
+  "info": { "singularName": "feature-page", "pluralName": "feature-pages", "displayName": "Features" },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": { "type": "component", "component": "shared.seo", "repeatable": false },
+    "geo": { "type": "component", "component": "shared.geo", "repeatable": false },
+    "aeo": { "type": "component", "component": "shared.aeo", "repeatable": false },
+    "hero": { "type": "component", "component": "shared.features-page-hero", "repeatable": false },
+    "featureGroups": { "type": "component", "component": "shared.feature-group", "repeatable": true },
+    "hardware": { "type": "component", "component": "shared.hardware-section", "repeatable": false },
+    "highlights": { "type": "component", "component": "shared.feature-highlights", "repeatable": false },
+    "workspace": { "type": "component", "component": "shared.workspace-section", "repeatable": false }
+  }
+}

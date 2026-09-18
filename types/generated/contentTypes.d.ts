@@ -823,6 +823,41 @@ export interface ApiFeatureMetaFeatureMeta extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiFeaturePageFeaturePage extends Struct.SingleTypeSchema {
+  collectionName: 'feature_pages';
+  info: {
+    displayName: 'Features';
+    pluralName: 'feature-pages';
+    singularName: 'feature-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    aeo: Schema.Attribute.Component<'shared.aeo', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    featureGroups: Schema.Attribute.Component<'shared.feature-group', true>;
+    geo: Schema.Attribute.Component<'shared.geo', false>;
+    hardware: Schema.Attribute.Component<'shared.hardware-section', false>;
+    hero: Schema.Attribute.Component<'shared.features-page-hero', false>;
+    highlights: Schema.Attribute.Component<'shared.feature-highlights', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::feature-page.feature-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    workspace: Schema.Attribute.Component<'shared.workspace-section', false>;
+  };
+}
+
 export interface ApiFeaturesHeroFeaturesHero extends Struct.SingleTypeSchema {
   collectionName: 'features_heroes';
   info: {
@@ -1242,6 +1277,41 @@ export interface ApiPricingHeroPricingHero extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPricingPagePricingPage extends Struct.SingleTypeSchema {
+  collectionName: 'pricing_pages';
+  info: {
+    displayName: 'Pricing';
+    pluralName: 'pricing-pages';
+    singularName: 'pricing-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    aeo: Schema.Attribute.Component<'shared.aeo', false>;
+    bottom: Schema.Attribute.Component<'shared.pricing-page-bottom', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    geo: Schema.Attribute.Component<'shared.geo', false>;
+    hero: Schema.Attribute.Component<'shared.pricing-page-hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pricing-page.pricing-page'
+    > &
+      Schema.Attribute.Private;
+    plans: Schema.Attribute.Component<'shared.pricing-page-plans', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    steps: Schema.Attribute.Component<'shared.pricing-page-steps', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    workspace: Schema.Attribute.Component<'shared.workspace-section', false>;
+  };
+}
+
 export interface ApiPricingPlansSectionPricingPlansSection
   extends Struct.SingleTypeSchema {
   collectionName: 'pricing_plans_sections';
@@ -1335,6 +1405,39 @@ export interface ApiStatsSectionStatsSection extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTutorialTutorial extends Struct.SingleTypeSchema {
+  collectionName: 'tutorial_pages';
+  info: {
+    displayName: 'Tutorial';
+    pluralName: 'tutorials';
+    singularName: 'tutorial';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    aeo: Schema.Attribute.Component<'shared.aeo', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    geo: Schema.Attribute.Component<'shared.geo', false>;
+    hero: Schema.Attribute.Component<'shared.tutorial-page-hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tutorial.tutorial'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    videos: Schema.Attribute.Component<'shared.tutorial-video-section', false>;
+    workspace: Schema.Attribute.Component<'shared.workspace-section', false>;
   };
 }
 
@@ -1891,6 +1994,7 @@ declare module '@strapi/strapi' {
       'api::dynamic-page.dynamic-page': ApiDynamicPageDynamicPage;
       'api::feature-highlights-section.feature-highlights-section': ApiFeatureHighlightsSectionFeatureHighlightsSection;
       'api::feature-meta.feature-meta': ApiFeatureMetaFeatureMeta;
+      'api::feature-page.feature-page': ApiFeaturePageFeaturePage;
       'api::features-hero.features-hero': ApiFeaturesHeroFeaturesHero;
       'api::features-list-section.features-list-section': ApiFeaturesListSectionFeaturesListSection;
       'api::global.global': ApiGlobalGlobal;
@@ -1901,9 +2005,11 @@ declare module '@strapi/strapi' {
       'api::home.home': ApiHomeHome;
       'api::pricing-bottom-section.pricing-bottom-section': ApiPricingBottomSectionPricingBottomSection;
       'api::pricing-hero.pricing-hero': ApiPricingHeroPricingHero;
+      'api::pricing-page.pricing-page': ApiPricingPagePricingPage;
       'api::pricing-plans-section.pricing-plans-section': ApiPricingPlansSectionPricingPlansSection;
       'api::pricing-steps-section.pricing-steps-section': ApiPricingStepsSectionPricingStepsSection;
       'api::stats-section.stats-section': ApiStatsSectionStatsSection;
+      'api::tutorial.tutorial': ApiTutorialTutorial;
       'api::why-choose-section.why-choose-section': ApiWhyChooseSectionWhyChooseSection;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

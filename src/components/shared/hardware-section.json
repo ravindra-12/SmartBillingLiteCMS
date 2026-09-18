@@ -1,0 +1,1 @@
+{"collectionName":"components_shared_hardware_sections","info":{"displayName":"Hardware Section"},"options":{},"attributes":{"badgeText":{"type":"string"},"heading":{"type":"string"},"subheading":{"type":"text"},"items":{"type":"component","component":"shared.text-card","repeatable":true}},"config":{}}

@@ -1,0 +1,1 @@
+{"collectionName":"components_shared_pricing_page_plans","info":{"displayName":"Pricing Page Plans"},"options":{},"attributes":{"plans":{"type":"component","component":"shared.pricing-plan","repeatable":true},"trustItems":{"type":"component","component":"shared.features","repeatable":true}},"config":{}}

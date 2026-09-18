@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_tutorial_page_heroes",
+  "info": {
+    "displayName": "Tutorial Page Hero"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": { "type": "string" },
+    "title": { "type": "string", "required": true },
+    "description": { "type": "text" }
+  },
+  "config": {}
+}

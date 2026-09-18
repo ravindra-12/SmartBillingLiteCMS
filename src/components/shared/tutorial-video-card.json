@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_tutorial_video_cards",
+  "info": {
+    "displayName": "Tutorial Video Card"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": { "type": "string", "default": "DEMO" },
+    "title": { "type": "string", "required": true },
+    "description": { "type": "text" },
+    "videoUrl": { "type": "string", "required": true },
+    "thumbnail": { "type": "media", "multiple": false, "allowedTypes": ["images"] }
+  },
+  "config": {}
+}

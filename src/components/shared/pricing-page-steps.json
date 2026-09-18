@@ -1,0 +1,1 @@
+{"collectionName":"components_shared_pricing_page_steps","info":{"displayName":"Pricing Page Steps"},"options":{},"attributes":{"badgeText":{"type":"string"},"heading":{"type":"string"},"subheading":{"type":"text"},"steps":{"type":"component","component":"shared.text-card","repeatable":true}},"config":{}}

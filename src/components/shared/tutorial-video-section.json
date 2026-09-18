@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_tutorial_video_sections",
+  "info": {
+    "displayName": "Tutorial Video Section"
+  },
+  "options": {},
+  "attributes": {
+    "badgeText": { "type": "string" },
+    "title": { "type": "string", "required": true },
+    "description": { "type": "text" },
+    "videos": { "type": "component", "component": "shared.tutorial-video-card", "repeatable": true }
+  },
+  "config": {}
+}

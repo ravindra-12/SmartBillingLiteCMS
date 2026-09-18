@@ -254,6 +254,21 @@ export interface SharedFeatureGroup extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFeatureHighlights extends Struct.ComponentSchema {
+  collectionName: 'components_shared_feature_highlights';
+  info: {
+    displayName: 'Feature Highlights';
+  };
+  attributes: {
+    aiHeading: Schema.Attribute.String;
+    aiItems: Schema.Attribute.Component<'shared.text-card', true>;
+    businessHeading: Schema.Attribute.String;
+    businessItems: Schema.Attribute.Component<'shared.features', true>;
+    buttonLink: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFeatures extends Struct.ComponentSchema {
   collectionName: 'components_shared_features';
   info: {
@@ -261,6 +276,30 @@ export interface SharedFeatures extends Struct.ComponentSchema {
   };
   attributes: {
     text: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFeaturesPageHero extends Struct.ComponentSchema {
+  collectionName: 'components_shared_features_page_heroes';
+  info: {
+    displayName: 'Features Page Hero';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    chartLabel: Schema.Attribute.String;
+    chartValues: Schema.Attribute.String;
+    customers: Schema.Attribute.String;
+    dashboardGrowth: Schema.Attribute.String;
+    dashboardValue: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    pending: Schema.Attribute.String;
+    primaryButtonLink: Schema.Attribute.String;
+    primaryButtonText: Schema.Attribute.String;
+    profit: Schema.Attribute.String;
+    secondaryButtonLink: Schema.Attribute.String;
+    secondaryButtonText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    totalBills: Schema.Attribute.String;
   };
 }
 
@@ -278,6 +317,19 @@ export interface SharedGeo extends Struct.ComponentSchema {
     references: Schema.Attribute.Component<'shared.reference', true>;
     schemaJson: Schema.Attribute.JSON;
     topics: Schema.Attribute.Component<'shared.topic', true>;
+  };
+}
+
+export interface SharedHardwareSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_hardware_sections';
+  info: {
+    displayName: 'Hardware Section';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    items: Schema.Attribute.Component<'shared.text-card', true>;
+    subheading: Schema.Attribute.Text;
   };
 }
 
@@ -410,6 +462,71 @@ export interface SharedMore extends Struct.ComponentSchema {
   };
   attributes: {
     items: Schema.Attribute.String;
+  };
+}
+
+export interface SharedPricingPageBottom extends Struct.ComponentSchema {
+  collectionName: 'components_shared_pricing_page_bottoms';
+  info: {
+    displayName: 'Pricing Page Bottom';
+  };
+  attributes: {
+    countryCode: Schema.Attribute.String;
+    ctaDescription: Schema.Attribute.Text;
+    ctaHeading: Schema.Attribute.String;
+    ctaPrimaryButtonLink: Schema.Attribute.String;
+    ctaPrimaryButtonText: Schema.Attribute.String;
+    ctaSecondaryButtonLink: Schema.Attribute.String;
+    ctaSecondaryButtonText: Schema.Attribute.String;
+    loginDescription: Schema.Attribute.Text;
+    loginHeading: Schema.Attribute.String;
+    otpButtonText: Schema.Attribute.String;
+    phoneLabel: Schema.Attribute.String;
+    phonePlaceholder: Schema.Attribute.String;
+    registerPrompt: Schema.Attribute.String;
+    registerText: Schema.Attribute.String;
+    testimonialBenefits: Schema.Attribute.Component<'shared.features', true>;
+    testimonialHeading: Schema.Attribute.String;
+    testimonialInitial: Schema.Attribute.String;
+    testimonialMeta: Schema.Attribute.String;
+    testimonialName: Schema.Attribute.String;
+    testimonialQuote: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedPricingPageHero extends Struct.ComponentSchema {
+  collectionName: 'components_shared_pricing_page_heroes';
+  info: {
+    displayName: 'Pricing Page Hero';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedPricingPagePlans extends Struct.ComponentSchema {
+  collectionName: 'components_shared_pricing_page_plans';
+  info: {
+    displayName: 'Pricing Page Plans';
+  };
+  attributes: {
+    plans: Schema.Attribute.Component<'shared.pricing-plan', true>;
+    trustItems: Schema.Attribute.Component<'shared.features', true>;
+  };
+}
+
+export interface SharedPricingPageSteps extends Struct.ComponentSchema {
+  collectionName: 'components_shared_pricing_page_steps';
+  info: {
+    displayName: 'Pricing Page Steps';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    steps: Schema.Attribute.Component<'shared.text-card', true>;
+    subheading: Schema.Attribute.Text;
   };
 }
 
@@ -560,6 +677,45 @@ export interface SharedTopic extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTutorialPageHero extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tutorial_page_heroes';
+  info: {
+    displayName: 'Tutorial Page Hero';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedTutorialVideoCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tutorial_video_cards';
+  info: {
+    displayName: 'Tutorial Video Card';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String & Schema.Attribute.DefaultTo<'DEMO'>;
+    description: Schema.Attribute.Text;
+    thumbnail: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    videoUrl: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedTutorialVideoSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tutorial_video_sections';
+  info: {
+    displayName: 'Tutorial Video Section';
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    videos: Schema.Attribute.Component<'shared.tutorial-video-card', true>;
+  };
+}
+
 export interface SharedWorkspaceCard extends Struct.ComponentSchema {
   collectionName: 'components_shared_workspace_cards';
   info: {
@@ -611,8 +767,11 @@ declare module '@strapi/strapi' {
       'shared.faq-items': SharedFaqItems;
       'shared.feature-card': SharedFeatureCard;
       'shared.feature-group': SharedFeatureGroup;
+      'shared.feature-highlights': SharedFeatureHighlights;
       'shared.features': SharedFeatures;
+      'shared.features-page-hero': SharedFeaturesPageHero;
       'shared.geo': SharedGeo;
+      'shared.hardware-section': SharedHardwareSection;
       'shared.header-app': SharedHeaderApp;
       'shared.home-feature-section': SharedHomeFeatureSection;
       'shared.home-hero': SharedHomeHero;
@@ -624,6 +783,10 @@ declare module '@strapi/strapi' {
       'shared.home-video-section': SharedHomeVideoSection;
       'shared.media': SharedMedia;
       'shared.more': SharedMore;
+      'shared.pricing-page-bottom': SharedPricingPageBottom;
+      'shared.pricing-page-hero': SharedPricingPageHero;
+      'shared.pricing-page-plans': SharedPricingPagePlans;
+      'shared.pricing-page-steps': SharedPricingPageSteps;
       'shared.pricing-plan': SharedPricingPlan;
       'shared.primary-button-home-app': SharedPrimaryButtonHomeApp;
       'shared.quick-action-item': SharedQuickActionItem;
@@ -636,6 +799,9 @@ declare module '@strapi/strapi' {
       'shared.stats-app': SharedStatsApp;
       'shared.text-card': SharedTextCard;
       'shared.topic': SharedTopic;
+      'shared.tutorial-page-hero': SharedTutorialPageHero;
+      'shared.tutorial-video-card': SharedTutorialVideoCard;
+      'shared.tutorial-video-section': SharedTutorialVideoSection;
       'shared.workspace-card': SharedWorkspaceCard;
       'shared.workspace-section': SharedWorkspaceSection;
     }

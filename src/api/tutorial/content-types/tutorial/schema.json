@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "tutorial_pages",
+  "info": {
+    "singularName": "tutorial",
+    "pluralName": "tutorials",
+    "displayName": "Tutorial"
+  },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": { "type": "component", "component": "shared.seo", "repeatable": false },
+    "geo": { "type": "component", "component": "shared.geo", "repeatable": false },
+    "aeo": { "type": "component", "component": "shared.aeo", "repeatable": false },
+    "hero": { "type": "component", "component": "shared.tutorial-page-hero", "repeatable": false },
+    "videos": { "type": "component", "component": "shared.tutorial-video-section", "repeatable": false },
+    "workspace": { "type": "component", "component": "shared.workspace-section", "repeatable": false }
+  }
+}
