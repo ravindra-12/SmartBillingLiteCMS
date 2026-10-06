@@ -15,6 +15,7 @@
     "seed:features": "node ./scripts/seed-features.js",
     "seed:pricing": "node ./scripts/seed-pricing.js",
     "seed:tutorial": "node ./scripts/seed-tutorial.js",
+    "seed:blog": "node ./scripts/seed-blog.js",
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
