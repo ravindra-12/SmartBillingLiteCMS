@@ -28,6 +28,21 @@
       "type": "richtext",
       "required": true
     },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "geo": {
+      "type": "component",
+      "component": "shared.geo",
+      "repeatable": false
+    },
+    "aeo": {
+      "type": "component",
+      "component": "shared.aeo",
+      "repeatable": false
+    },
     "coverImage": {
       "type": "media",
       "multiple": false,

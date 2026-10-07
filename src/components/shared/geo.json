@@ -32,6 +32,14 @@
     "canonicalUrl": {
       "type": "string"
     },
+    "kr": {
+      "type": "boolean",
+      "default": false
+    },
+    "vo": {
+      "type": "boolean",
+      "default": false
+    },
     "schemaJson": {
       "type": "json"
     }

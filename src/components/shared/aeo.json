@@ -45,6 +45,14 @@
       "type": "component",
       "component": "shared.faq-items",
       "repeatable": true
+    },
+    "kr": {
+      "type": "boolean",
+      "default": false
+    },
+    "vo": {
+      "type": "boolean",
+      "default": false
     }
   },
   "config": {}

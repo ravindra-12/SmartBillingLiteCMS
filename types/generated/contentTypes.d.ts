@@ -645,6 +645,7 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    aeo: Schema.Attribute.Component<'shared.aeo', false>;
     author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     content: Schema.Attribute.RichText & Schema.Attribute.Required;
@@ -654,6 +655,7 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     excerpt: Schema.Attribute.Text & Schema.Attribute.Required;
     featured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    geo: Schema.Attribute.Component<'shared.geo', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -668,6 +670,7 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
         },
         number
       >;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     seoDescription: Schema.Attribute.Text;
     seoKeywords: Schema.Attribute.String;
     seoTitle: Schema.Attribute.String;

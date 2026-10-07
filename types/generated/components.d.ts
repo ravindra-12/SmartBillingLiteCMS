@@ -11,6 +11,7 @@ export interface SharedAeo extends Struct.ComponentSchema {
     faqItems: Schema.Attribute.Component<'shared.faq-items', true>;
     headline: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    kr: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     schemaType: Schema.Attribute.Enumeration<
       [
         'WebPage',
@@ -25,6 +26,7 @@ export interface SharedAeo extends Struct.ComponentSchema {
       ]
     >;
     url: Schema.Attribute.String;
+    vo: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -313,10 +315,12 @@ export interface SharedGeo extends Struct.ComponentSchema {
     canonicalUrl: Schema.Attribute.String;
     faqs: Schema.Attribute.Component<'shared.faq', true>;
     keyTakeaways: Schema.Attribute.Text;
+    kr: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     lastReviewed: Schema.Attribute.Date;
     references: Schema.Attribute.Component<'shared.reference', true>;
     schemaJson: Schema.Attribute.JSON;
     topics: Schema.Attribute.Component<'shared.topic', true>;
+    vo: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
   };
 }
 
