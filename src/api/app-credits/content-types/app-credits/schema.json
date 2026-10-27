@@ -1,0 +1,7 @@
+{
+  "kind": "singleType", "collectionName": "app_credits",
+  "info": { "singularName": "app-credits", "pluralName": "app-credit-screens", "displayName": "App Credits", "description": "Localized static labels for the credits screen." },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": { "labels": { "type": "component", "component": "shared.app-screen-label", "repeatable": true, "required": true, "pluginOptions": { "i18n": { "localized": true } } } }
+}

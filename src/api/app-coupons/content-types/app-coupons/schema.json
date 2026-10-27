@@ -1,0 +1,7 @@
+{
+  "kind": "singleType", "collectionName": "app_coupons",
+  "info": { "singularName": "app-coupons", "pluralName": "app-coupon-screens", "displayName": "App Coupons", "description": "Localized static labels for the coupons screen." },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": { "labels": { "type": "component", "component": "shared.app-screen-label", "repeatable": true, "required": true, "pluginOptions": { "i18n": { "localized": true } } } }
+}

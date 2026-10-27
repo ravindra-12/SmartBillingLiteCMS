@@ -530,6 +530,437 @@ export interface ApiAffiliateProgrammeAffiliateProgramme
   };
 }
 
+export interface ApiAppCouponsAppCoupons extends Struct.SingleTypeSchema {
+  collectionName: 'app_coupons';
+  info: {
+    description: 'Localized static labels for the coupons screen.';
+    displayName: 'App Coupons';
+    pluralName: 'app-coupon-screens';
+    singularName: 'app-coupons';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    labels: Schema.Attribute.Component<'shared.app-screen-label', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::app-coupons.app-coupons'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAppCreditsAppCredits extends Struct.SingleTypeSchema {
+  collectionName: 'app_credits';
+  info: {
+    description: 'Localized static labels for the credits screen.';
+    displayName: 'App Credits';
+    pluralName: 'app-credit-screens';
+    singularName: 'app-credits';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    labels: Schema.Attribute.Component<'shared.app-screen-label', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::app-credits.app-credits'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAppDashboardAppDashboard extends Struct.SingleTypeSchema {
+  collectionName: 'app_dashboards';
+  info: {
+    description: 'Localized static labels for the mobile app dashboard.';
+    displayName: 'App Dashboard';
+    pluralName: 'app-dashboard-screens';
+    singularName: 'app-dashboard';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    labels: Schema.Attribute.Component<'shared.app-screen-label', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::app-dashboard.app-dashboard'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAppHomeAppHome extends Struct.SingleTypeSchema {
+  collectionName: 'app_homes';
+  info: {
+    description: 'Localized static labels for the mobile app home screen.';
+    displayName: 'App Home';
+    pluralName: 'app-home-screens';
+    singularName: 'app-home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    labels: Schema.Attribute.Component<'shared.app-screen-label', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::app-home.app-home'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAppInvestmentAppInvestment extends Struct.SingleTypeSchema {
+  collectionName: 'app_investments';
+  info: {
+    description: 'Localized static labels for the investment screen.';
+    displayName: 'App Investment';
+    pluralName: 'app-investment-screens';
+    singularName: 'app-investment';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    labels: Schema.Attribute.Component<'shared.app-screen-label', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::app-investment.app-investment'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAppItemsAppItems extends Struct.SingleTypeSchema {
+  collectionName: 'app_items_screens';
+  info: {
+    description: 'Localized static labels for the items screen.';
+    displayName: 'App Items';
+    pluralName: 'app-item-screens';
+    singularName: 'app-items';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    labels: Schema.Attribute.Component<'shared.app-screen-label', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::app-items.app-items'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAppMembershipAppMembership extends Struct.SingleTypeSchema {
+  collectionName: 'app_memberships';
+  info: {
+    description: 'Localized static labels for the membership screen.';
+    displayName: 'App Membership';
+    pluralName: 'app-membership-screens';
+    singularName: 'app-membership';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    labels: Schema.Attribute.Component<'shared.app-screen-label', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::app-membership.app-membership'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAppReferEarnAppReferEarn extends Struct.SingleTypeSchema {
+  collectionName: 'app_refer_earns';
+  info: {
+    description: 'Localized static labels for the refer and earn screen.';
+    displayName: 'App Refer and Earn';
+    pluralName: 'app-refer-earn-screens';
+    singularName: 'app-refer-earn';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    labels: Schema.Attribute.Component<'shared.app-screen-label', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::app-refer-earn.app-refer-earn'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAppSignInAppSignIn extends Struct.SingleTypeSchema {
+  collectionName: 'app_sign_ins';
+  info: {
+    description: 'Localized static labels for the mobile sign-in screen.';
+    displayName: 'App Sign In';
+    pluralName: 'app-sign-in-screens';
+    singularName: 'app-sign-in';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    labels: Schema.Attribute.Component<'shared.app-screen-label', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::app-sign-in.app-sign-in'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAppSubscriptionAppSubscription
+  extends Struct.SingleTypeSchema {
+  collectionName: 'app_subscriptions';
+  info: {
+    description: 'Localized static labels for the subscription screen.';
+    displayName: 'App Subscription';
+    pluralName: 'app-subscription-screens';
+    singularName: 'app-subscription';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    labels: Schema.Attribute.Component<'shared.app-screen-label', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::app-subscription.app-subscription'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAppTransactionsAppTransactions
+  extends Struct.SingleTypeSchema {
+  collectionName: 'app_transactions_screens';
+  info: {
+    description: 'Localized static labels for the transactions screen.';
+    displayName: 'App Transactions';
+    pluralName: 'app-transaction-screens';
+    singularName: 'app-transactions';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    labels: Schema.Attribute.Component<'shared.app-screen-label', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::app-transactions.app-transactions'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
@@ -2100,6 +2531,17 @@ declare module '@strapi/strapi' {
       'api::about-meta.about-meta': ApiAboutMetaAboutMeta;
       'api::about.about': ApiAboutAbout;
       'api::affiliate-programme.affiliate-programme': ApiAffiliateProgrammeAffiliateProgramme;
+      'api::app-coupons.app-coupons': ApiAppCouponsAppCoupons;
+      'api::app-credits.app-credits': ApiAppCreditsAppCredits;
+      'api::app-dashboard.app-dashboard': ApiAppDashboardAppDashboard;
+      'api::app-home.app-home': ApiAppHomeAppHome;
+      'api::app-investment.app-investment': ApiAppInvestmentAppInvestment;
+      'api::app-items.app-items': ApiAppItemsAppItems;
+      'api::app-membership.app-membership': ApiAppMembershipAppMembership;
+      'api::app-refer-earn.app-refer-earn': ApiAppReferEarnAppReferEarn;
+      'api::app-sign-in.app-sign-in': ApiAppSignInAppSignIn;
+      'api::app-subscription.app-subscription': ApiAppSubscriptionAppSubscription;
+      'api::app-transactions.app-transactions': ApiAppTransactionsAppTransactions;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::blog-meta.blog-meta': ApiBlogMetaBlogMeta;

@@ -1,0 +1,7 @@
+{
+  "kind": "singleType", "collectionName": "app_memberships",
+  "info": { "singularName": "app-membership", "pluralName": "app-membership-screens", "displayName": "App Membership", "description": "Localized static labels for the membership screen." },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": { "labels": { "type": "component", "component": "shared.app-screen-label", "repeatable": true, "required": true, "pluginOptions": { "i18n": { "localized": true } } } }
+}

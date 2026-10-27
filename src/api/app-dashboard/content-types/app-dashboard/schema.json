@@ -1,0 +1,7 @@
+{
+  "kind": "singleType", "collectionName": "app_dashboards",
+  "info": { "singularName": "app-dashboard", "pluralName": "app-dashboard-screens", "displayName": "App Dashboard", "description": "Localized static labels for the mobile app dashboard." },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": { "labels": { "type": "component", "component": "shared.app-screen-label", "repeatable": true, "required": true, "pluginOptions": { "i18n": { "localized": true } } } }
+}

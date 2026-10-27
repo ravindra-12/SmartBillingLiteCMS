@@ -1,0 +1,7 @@
+{
+  "kind": "singleType", "collectionName": "app_items_screens",
+  "info": { "singularName": "app-items", "pluralName": "app-item-screens", "displayName": "App Items", "description": "Localized static labels for the items screen." },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": { "labels": { "type": "component", "component": "shared.app-screen-label", "repeatable": true, "required": true, "pluginOptions": { "i18n": { "localized": true } } } }
+}

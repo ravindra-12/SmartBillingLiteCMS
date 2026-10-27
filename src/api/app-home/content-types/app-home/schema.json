@@ -1,0 +1,7 @@
+{
+  "kind": "singleType", "collectionName": "app_homes",
+  "info": { "singularName": "app-home", "pluralName": "app-home-screens", "displayName": "App Home", "description": "Localized static labels for the mobile app home screen." },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": { "labels": { "type": "component", "component": "shared.app-screen-label", "repeatable": true, "required": true, "pluginOptions": { "i18n": { "localized": true } } } }
+}

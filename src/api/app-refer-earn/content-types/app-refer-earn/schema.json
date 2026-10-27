@@ -1,0 +1,7 @@
+{
+  "kind": "singleType", "collectionName": "app_refer_earns",
+  "info": { "singularName": "app-refer-earn", "pluralName": "app-refer-earn-screens", "displayName": "App Refer and Earn", "description": "Localized static labels for the refer and earn screen." },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": { "labels": { "type": "component", "component": "shared.app-screen-label", "repeatable": true, "required": true, "pluginOptions": { "i18n": { "localized": true } } } }
+}

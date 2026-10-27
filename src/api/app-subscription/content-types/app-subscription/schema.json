@@ -1,0 +1,7 @@
+{
+  "kind": "singleType", "collectionName": "app_subscriptions",
+  "info": { "singularName": "app-subscription", "pluralName": "app-subscription-screens", "displayName": "App Subscription", "description": "Localized static labels for the subscription screen." },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": { "labels": { "type": "component", "component": "shared.app-screen-label", "repeatable": true, "required": true, "pluginOptions": { "i18n": { "localized": true } } } }
+}

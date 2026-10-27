@@ -1,0 +1,7 @@
+{
+  "kind": "singleType", "collectionName": "app_transactions_screens",
+  "info": { "singularName": "app-transactions", "pluralName": "app-transaction-screens", "displayName": "App Transactions", "description": "Localized static labels for the transactions screen." },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": { "labels": { "type": "component", "component": "shared.app-screen-label", "repeatable": true, "required": true, "pluginOptions": { "i18n": { "localized": true } } } }
+}

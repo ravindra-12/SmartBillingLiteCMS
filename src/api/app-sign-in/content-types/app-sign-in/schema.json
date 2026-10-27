@@ -1,0 +1,7 @@
+{
+  "kind": "singleType", "collectionName": "app_sign_ins",
+  "info": { "singularName": "app-sign-in", "pluralName": "app-sign-in-screens", "displayName": "App Sign In", "description": "Localized static labels for the mobile sign-in screen." },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": { "labels": { "type": "component", "component": "shared.app-screen-label", "repeatable": true, "required": true, "pluginOptions": { "i18n": { "localized": true } } } }
+}

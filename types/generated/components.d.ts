@@ -47,6 +47,18 @@ export interface SharedAppDownloadSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedAppScreenLabel extends Struct.ComponentSchema {
+  collectionName: 'components_shared_app_screen_labels';
+  info: {
+    description: 'A locale-specific static label displayed in the mobile app.';
+    displayName: 'App Screen Label';
+  };
+  attributes: {
+    key: Schema.Attribute.String & Schema.Attribute.Required;
+    value: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedBusinessFeatures extends Struct.ComponentSchema {
   collectionName: 'components_shared_business_features';
   info: {
@@ -755,6 +767,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.aeo': SharedAeo;
       'shared.app-download-section': SharedAppDownloadSection;
+      'shared.app-screen-label': SharedAppScreenLabel;
       'shared.business-features': SharedBusinessFeatures;
       'shared.business-type-item': SharedBusinessTypeItem;
       'shared.business-types-section': SharedBusinessTypesSection;

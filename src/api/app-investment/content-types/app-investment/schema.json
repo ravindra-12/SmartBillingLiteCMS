@@ -1,0 +1,7 @@
+{
+  "kind": "singleType", "collectionName": "app_investments",
+  "info": { "singularName": "app-investment", "pluralName": "app-investment-screens", "displayName": "App Investment", "description": "Localized static labels for the investment screen." },
+  "options": { "draftAndPublish": true },
+  "pluginOptions": { "i18n": { "localized": true } },
+  "attributes": { "labels": { "type": "component", "component": "shared.app-screen-label", "repeatable": true, "required": true, "pluginOptions": { "i18n": { "localized": true } } } }
+}

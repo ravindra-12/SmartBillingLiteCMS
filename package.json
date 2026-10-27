@@ -16,6 +16,7 @@
     "seed:pricing": "node ./scripts/seed-pricing.js",
     "seed:tutorial": "node ./scripts/seed-tutorial.js",
     "seed:blog": "node ./scripts/seed-blog.js",
+    "seed:app-screens": "node ./scripts/seed-app-screens.js",
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
