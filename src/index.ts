@@ -1,4 +1,4 @@
-// import type { Core } from '@strapi/strapi';
+import type { Core } from '@strapi/strapi';
 
 export default {
   /**
@@ -7,7 +7,16 @@ export default {
    *
    * This gives you an opportunity to extend code.
    */
-  register(/* { strapi }: { strapi: Core.Strapi } */) {},
+  register({ strapi }: { strapi: Core.Strapi }) {
+    strapi.customFields.register({
+      name: 'quill-rich-text',
+      type: 'text',
+      inputSize: {
+        default: 12,
+        isResizable: true,
+      },
+    });
+  },
 
   /**
    * An asynchronous bootstrap function that runs before

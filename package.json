@@ -28,13 +28,17 @@
     "@strapi/strapi": "5.47.1",
     "better-sqlite3": "12.8.0",
     "fs-extra": "^10.0.0",
+    "markdown-it": "^14.1.0",
     "mime-types": "^2.1.27",
+    "quill": "^2.0.3",
+    "quill-resizable-table": "^1.2.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
+    "@types/markdown-it": "^14.2.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
