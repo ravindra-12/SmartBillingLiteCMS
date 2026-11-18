@@ -25,8 +25,7 @@
       "required": true
     },
     "content": {
-      "type": "customField",
-      "customField": "global::quill-rich-text",
+      "type": "richtext",
       "required": true
     },
     "seo": {

@@ -95,7 +95,7 @@ async function main() {
       excerpt:
         'Discover how an efficient billing system can reduce queue time, improve customer trust, and help local stores grow without added complexity.',
       content:
-        '<h2>Why billing speed matters</h2><p>Retail owners often lose time and revenue when waiting for invoices, printing receipts, and tracking customer visits manually.</p><p>A modern POS keeps these tasks in one place and helps teams move faster than traditional paper systems.</p><h3>Key benefits</h3><ul><li>Faster checkout experience</li><li>Better customer trust with digitized receipts</li><li>Clear insights into sales and payment behavior</li></ul>',
+        '## Why billing speed matters\n\nRetail owners often lose time and revenue when waiting for invoices, printing receipts, and tracking customer visits manually.\n\nA modern POS keeps these tasks in one place and helps teams move faster than traditional paper systems.\n\n### Key benefits\n\n- Faster checkout experience\n- Better customer trust with digitized receipts\n- Clear insights into sales and payment behavior',
       author: authorDocs[0].documentId,
       category: categoryDocs[0].documentId,
       tags: tagDocs.slice(0, 3).map((tag) => tag.documentId),
@@ -112,7 +112,7 @@ async function main() {
       excerpt:
         'Payment data tells you more than how much you sold — it helps uncover bottlenecks, customer habits, and business opportunities.',
       content:
-        '<h2>Turn payments into operational insights</h2><p>Daily transaction reports can show which products sell faster, when customers are most active, and how often your store needs restocking.</p><p>When the right numbers are visible in one dashboard, daily decisions become much easier.</p>',
+        '## Turn payments into operational insights\n\nDaily transaction reports can show which products sell faster, when customers are most active, and how often your store needs restocking.\n\nWhen the right numbers are visible in one dashboard, daily decisions become much easier.',
       author: authorDocs[1].documentId,
       category: categoryDocs[1].documentId,
       tags: tagDocs.slice(1, 4).map((tag) => tag.documentId),
